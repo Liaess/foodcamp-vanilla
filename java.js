@@ -36,11 +36,10 @@ function selectextra(eproduct){
 function closing(){
     if (summation === 3){ 
         const teste = document.querySelector(".bottom .button h1");
-        teste.innerHTML = "Fechar pedido";
+        teste.innerHTML = "<a href='#'>Fechar pedido</a>";
     }
     if (summation === 3){
         const teste2 = document.querySelector(".button");
         teste2.classList.add("close");
     }
-} 
-
+}
