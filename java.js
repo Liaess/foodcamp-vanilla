@@ -7,7 +7,6 @@ let pricedrink;
 let priceextra;
 let totalprice = 0
 
-
 function selectfood(eproduct){
     const select = document.querySelector(".food .border");
     if (select !==null){
@@ -54,15 +53,15 @@ function selectextra(eproduct){
     priceextra = itempriceextra.innerHTML;
 }
 function closing(){
-    const telephone = 5521987972806
     if (summation === 3){ 
         const teste = document.querySelector(".bottom .button h1");
-        teste.innerHTML = "Fechar pedido";
+        teste.innerHTML = "Fechar Pedido";
     }
     if (summation === 3){
         const teste2 = document.querySelector(".button");
         teste2.classList.add("close");
     }
+    
 }
 function finish(){
     pricefood = pricefood.replace("R$ ","");
@@ -74,6 +73,14 @@ function finish(){
     priceextra = priceextra.replace("R$ ","");
     priceextra = priceextra.replace(",",".");
     priceextra = parseFloat(priceextra);
-    totalprice = pricefood + pricedrink + priceextra;
-    alert(totalprice);
+    totalprice = (pricefood + pricedrink + priceextra).toFixed(2);
+    let text = 
+    `Olá, gostaria de fazer o pedido:
+    - Prato: ${foodchoice}
+    - Bebida: ${drinkchoice}
+    - Sobremesa: ${extrachoice}
+    Total: R$ ${totalprice}`;
+    const texturi = encodeURI(text);
+    const linkurl = `https://wa.me/5521987972806?text=${texturi}`;
+    window.location.href = linkurl; 
 }
