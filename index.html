@@ -40,7 +40,7 @@
                     <img class="imgsize" src="images/batatafritacheedar.png" alt="">
                     <h1 class="choice">Batata frita c/Cheddar&Bacon</h1>
                     <h2>Nossa batata com cheddar e bacon</h2>
-                    <h3 class="price">R$ 19,90</h3>
+                    <h3 class="price">R$ 19,99</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
                 <div class="ebox food4" onclick="selectfood('.food4')">
@@ -76,7 +76,7 @@
                     <img class="imgsize" src="images/sprite.jpg" alt="">
                     <h1 class="choice">Sprite geladinha</h1>
                     <h2>Lata 350ml</h2>
-                    <h3 class="price">R$ 4,90</h3>
+                    <h3 class="price">R$ 4,99</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
                 <div class="ebox drink4" onclick="selectdrink('.drink4')">
@@ -98,14 +98,14 @@
                     <img class="imgsize" src="images/pudim.jpeg" alt="">
                     <h1 class="choice">Pudim</h1>
                     <h2>Pudim de leite condensado</h2>
-                    <h3 class="price">R$ 8,90</h3>
+                    <h3 class="price">R$ 8,99</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
                 <div class="ebox extra2" onclick="selectextra('.extra2')">
                     <img class="imgsize" src="images/bolobiscoito.jpg" alt="">
                     <h1 class="choice">Bolo Biscoito</h1>
                     <h2>Bolo caseiro feito com amor e biscoito</h2>
-                    <h3 class="price">R$ 8,50</h3>
+                    <h3 class="price">R$ 8,59</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
                 <div class="ebox extra3" onclick="selectextra('.extra3')">
@@ -119,34 +119,37 @@
                     <img class="imgsize" src="images/minitortinha.jpg" alt="">
                     <h1 class="choice">Mini Torta</h1>
                     <h2>Mini Torta pequena sabor morango</h2>
-                    <h3>R$ 6,50</h3>
+                    <h3 class="price">R$ 6,59</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
         </div>
         
-        <div class="bottom" onclick="finish()">
+        <div class="bottom" onclick="confirm()">
             <div class="button">
                 <h1>Selecione os 3 itens <br>para fechar o pedido</h1>
             </div>
         </div>
         <div class="confirm">
-            <p>Confirme seu pedido</p>
-            <div>
+            <p class="confirmtitle">Confirme seu pedido</p>
+            <div class="confirmfood">
                 <p class="foodname">namefood</p>
                 <p class="foodprice">foodprice</p>
             </div>
-            <div>
+            <div class="confirmdrink">
                 <p class="drinkname">namedrink</p>
-                <p class="drinkprice">fooddrink</p>
+                <p class="drinkprice">pricedrink</p>
             </div>
-            <div>
+            <div class="confirmextra">
                 <p class="extraname">nameextra</p>
-                <p class="extraprice">foodextra</p>
+                <p class="extraprice">priceextra</p>
             </div>
-            <div>
-                <p>total</p>
-                <p>totalprice</p>
+            <div class="confirmtotal">
+                <p>TOTAL</p>
+                <p class="totalprice">totalprice</p>
+            </div>
+            <div class="buttonconfirm">
+                <p>Tudo certo, pode pedir!</p>
             </div>
         </div>
     </div>    
