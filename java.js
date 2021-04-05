@@ -120,3 +120,11 @@ function finish(){
     const linkurl = `https://wa.me/5521987972806?text=${texturi}`;
     window.location.href = linkurl; 
 }
+function cancel(){
+    const removeprop = document.querySelector(".changebody")
+    removeprop.classList.add("hidden")
+    const removepropanother = document.querySelector(".confirm")
+    removepropanother.classList.add("hidden")
+    const addprop = document.querySelector(".changebody")
+    addprop.classList.remove("opacity")
+}

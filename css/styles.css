@@ -217,7 +217,8 @@ ion-icon {
 }
 .confirm{
     width: 377px;
-    height: 380px;
+    height: auto;
+    min-height: 380px;
     z-index: 5;
     background-color: #50D074;
     top: calc((100% - 377px)/2);
@@ -295,4 +296,5 @@ ion-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
