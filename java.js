@@ -74,12 +74,20 @@ function finish(){
     priceextra = priceextra.replace(",",".");
     priceextra = parseFloat(priceextra);
     totalprice = (pricefood + pricedrink + priceextra).toFixed(2);
+    
+    const name = prompt("Qual o seu nome?");
+    const adress = prompt("Qual o seu endereço?");
+    
     let text = 
     `Olá, gostaria de fazer o pedido:
     - Prato: ${foodchoice}
     - Bebida: ${drinkchoice}
     - Sobremesa: ${extrachoice}
-    Total: R$ ${totalprice}`;
+    Total: R$ ${totalprice}
+
+    Nome: ${name}
+    Endereço ${adress}`;
+
     const texturi = encodeURI(text);
     const linkurl = `https://wa.me/5521987972806?text=${texturi}`;
     window.location.href = linkurl; 

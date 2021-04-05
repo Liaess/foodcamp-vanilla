@@ -197,9 +197,10 @@ ion-icon {
     background-color: #32B72F ;
     text-decoration: inherit;
 }
+/* confirm */
 .confirm{
-    display: none;
-    position:fixed;
-    z-index: 3;
+    width: 375px;
+    height: 355px;
+    z-index: 5;
     background-color: #50D074;
 }
