@@ -92,3 +92,20 @@ function finish(){
     const linkurl = `https://wa.me/5521987972806?text=${texturi}`;
     window.location.href = linkurl; 
 }
+/*
+function confirm(){
+    const test = document.querySelector(".confirm .foodname");
+    test.innerHTML = <p>${foodchoice}</p>
+    const test1 = document.querySelector(".confirm .foodprice");
+    test1.innerHTML = <p>${pricefood}</p>
+
+    const test2 = document.querySelector(".confirm .drinkname");
+    test2.innerHTML = <p>${drinkchoice}</p>
+    const test3 = document.querySelector(".confirm .drinkprice");
+    test3.innerHTML = <p>${pricedrink}</p>
+    
+    const test4 = document.querySelector(".confirm .extraname");
+    test4.innerHTML = <p>${extrachoice}</p>
+    const test5 = document.querySelector(".confirm .extraprice");
+    test5.innerHTML = <p>${priceextra}</p>
+} */
