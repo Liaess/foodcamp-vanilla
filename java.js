@@ -1,4 +1,4 @@
-let summation = 0; 
+let sum = 0; 
 let foodchoice;
 let drinkchoice;
 let extrachoice;
@@ -8,14 +8,14 @@ let priceextra;
 let totalprice = 0
 
 function selectfood(eproduct){
-    const select = document.querySelector(".food .border");
-    if (select !==null){
-        select.classList.remove("border");
-        summation = summation - 1;
+    const oldselect = document.querySelector(".food .border");
+    if (oldselect !==null){
+        oldselect.classList.remove("border");
+        sum = sum - 1;
     }
-    const select1 = document.querySelector(eproduct);
-    select1.classList.add("border");
-    summation = summation + 1;
+    const newselect = document.querySelector(eproduct);
+    newselect.classList.add("border");
+    sum = sum + 1;
     closing();
     const itemfood = document.querySelector(".food .border .choice");
     foodchoice = itemfood.innerHTML;
@@ -23,14 +23,14 @@ function selectfood(eproduct){
     pricefood = itempricefood.innerHTML;
 }
 function selectdrink(eproduct){
-    const select = document.querySelector(".drinks .border");
-    if (select !==null){
-        select.classList.remove("border");
-        summation = summation - 1;
+    const oldselect = document.querySelector(".drinks .border");
+    if (oldselect !==null){
+        oldselect.classList.remove("border");
+        sum = sum - 1;
     }
-    const select1 = document.querySelector(eproduct);
-    select1.classList.add("border");
-    summation = summation + 1;
+    const newselect = document.querySelector(eproduct);
+    newselect.classList.add("border");
+    sum = sum + 1;
     closing();
     const itemdrink = document.querySelector(".drinks .border .choice");
     drinkchoice = itemdrink.innerHTML;
@@ -38,14 +38,14 @@ function selectdrink(eproduct){
     pricedrink = itempricedrink.innerHTML;
 }
 function selectextra(eproduct){
-    const select = document.querySelector(".extra .border");
-    if (select !==null){
-        select.classList.remove("border");
-        summation = summation - 1;
+    const oldselect = document.querySelector(".extra .border");
+    if (oldselect !==null){
+        oldselect.classList.remove("border");
+        sum = sum - 1;
     }
-    const select1 = document.querySelector(eproduct);
-    select1.classList.add("border");
-    summation = summation + 1;
+    const newselect = document.querySelector(eproduct);
+    newselect.classList.add("border");
+    sum = sum + 1;
     closing();
     const itemextra = document.querySelector(".extra .border .choice");
     extrachoice = itemextra.innerHTML;
@@ -53,13 +53,13 @@ function selectextra(eproduct){
     priceextra = itempriceextra.innerHTML;
 }
 function closing(){
-    if (summation === 3){ 
-        const teste = document.querySelector(".bottom .button h1");
-        teste.innerHTML = "Fechar Pedido";
+    if (sum === 3){ 
+        const result = document.querySelector(".bottom .button h1");
+        result.innerHTML = "Fechar Pedido";
     }
-    if (summation === 3){
-        const teste2 = document.querySelector(".button");
-        teste2.classList.add("close");
+    if (sum === 3){
+        const result = document.querySelector(".button");
+        result.classList.add("close");
     }
     
 }
