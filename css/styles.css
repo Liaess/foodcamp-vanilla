@@ -206,6 +206,15 @@ ion-icon {
 
 
 /* confirm */
+.opacity{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.80;
+    z-index: 3;
+}
 .confirm{
     width: 377px;
     height: 380px;
@@ -215,6 +224,7 @@ ion-icon {
     left: calc((100% - 377px)/2);
     position: fixed;
     border-radius: 9px;
+    opacity: 1;
 }
 .confirm p{
     font-family: 'Roboto', sans-serif;
@@ -260,17 +270,29 @@ ion-icon {
     margin-right: 15px;
     margin-left: 15px;
     font-weight: bold;
+
 }
 .buttonconfirm{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    margin: 20px auto;
+    margin: 22px auto;
     width: 333px;
     height: 55px;
     border-radius: 50px;
 }
 .buttonconfirm p{
     color: #50D074;
+    font-weight: 700;
+    margin-top: 3px;
+}
+.hidden{
+    display: none;
+}
+.cancel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

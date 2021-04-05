@@ -11,7 +11,6 @@
     <title>FoodCamp</title>
 </head>
 <body>
-
     <div>
         <div class="top">
             <h1>FoodCamp</h1>
@@ -125,12 +124,14 @@
             </div>
         </div>
         
-        <div class="bottom" onclick="confirm()">
-            <div class="button">
+        <div class="bottom">
+            <div class="button" onclick="confirm()">
                 <h1>Selecione os 3 itens <br>para fechar o pedido</h1>
             </div>
         </div>
-        <div class="confirm">
+    </div>
+    <div class="changebody hidden"></div>
+    <div class="confirm hidden">
             <p class="confirmtitle">Confirme seu pedido</p>
             <div class="confirmfood">
                 <p class="foodname">namefood</p>
@@ -148,12 +149,15 @@
                 <p>TOTAL</p>
                 <p class="totalprice">totalprice</p>
             </div>
-            <div class="buttonconfirm">
+            <div class="buttonconfirm" onclick="finish()">
                 <p>Tudo certo, pode pedir!</p>
             </div>
-        </div>
-    </div>    
-<script src="java.js"></script>
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+            <div>
+                <p class="cancel">Cancelar</p>
+            </div>
+    </div>
+    
+    <script src="java.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

@@ -63,7 +63,14 @@ function closing(){
     }
     
 }
-function finish(){
+function confirm(){
+    const removeprop = document.querySelector(".changebody")
+    removeprop.classList.remove("hidden")
+    const removepropanother = document.querySelector(".confirm")
+    removepropanother.classList.remove("hidden")
+    const addprop = document.querySelector(".changebody")
+    addprop.classList.add("opacity")
+    
     pricefood = pricefood.replace("R$ ","");
     pricefood = pricefood.replace(",",".");
     pricefood = parseFloat(pricefood);
@@ -74,7 +81,28 @@ function finish(){
     priceextra = priceextra.replace(",",".");
     priceextra = parseFloat(priceextra);
     totalprice = (pricefood + pricedrink + priceextra).toFixed(2);
+
+
+    const foodbonus = document.querySelector(".confirm .foodname");
+    foodbonus.innerHTML = foodchoice
+    const foodpricebonus = document.querySelector(".confirm .foodprice");
+    foodpricebonus.innerHTML = pricefood
+
+    const drinkbonus = document.querySelector(".confirm .drinkname");
+    drinkbonus.innerHTML = drinkchoice
+    const drinkpricebonus = document.querySelector(".confirm .drinkprice");
+    drinkpricebonus.innerHTML = pricedrink
     
+    const extrabonus = document.querySelector(".confirm .extraname");
+    extrabonus.innerHTML = extrachoice
+    const extrapricebonus = document.querySelector(".confirm .extraprice");
+    extrapricebonus.innerHTML = priceextra
+    
+    const test6 = document.querySelector(".confirm .totalprice");
+    test6.innerHTML = 'R$ ' + totalprice
+}
+
+function finish(){
     const name = prompt("Qual o seu nome?");
     const adress = prompt("Qual o seu endereço?");
     
@@ -92,35 +120,3 @@ function finish(){
     const linkurl = `https://wa.me/5521987972806?text=${texturi}`;
     window.location.href = linkurl; 
 }
-
-function confirm(){
-    pricefood = pricefood.replace("R$ ","");
-    pricefood = pricefood.replace(",",".");
-    pricefood = parseFloat(pricefood);
-    pricedrink = pricedrink.replace("R$ ","");
-    pricedrink = pricedrink.replace(",",".");
-    pricedrink = parseFloat(pricedrink);
-    priceextra = priceextra.replace("R$ ","");
-    priceextra = priceextra.replace(",",".");
-    priceextra = parseFloat(priceextra);
-    totalprice = (pricefood + pricedrink + priceextra).toFixed(2);
-
-
-    const test = document.querySelector(".confirm .foodname");
-    test.innerHTML = foodchoice
-    const test1 = document.querySelector(".confirm .foodprice");
-    test1.innerHTML = pricefood
-
-    const test2 = document.querySelector(".confirm .drinkname");
-    test2.innerHTML = drinkchoice
-    const test3 = document.querySelector(".confirm .drinkprice");
-    test3.innerHTML = pricedrink
-    
-    const test4 = document.querySelector(".confirm .extraname");
-    test4.innerHTML = extrachoice
-    const test5 = document.querySelector(".confirm .extraprice");
-    test5.innerHTML = priceextra
-    
-    const test6 = document.querySelector(".confirm .totalprice");
-    test6.innerHTML = 'R$ ' + totalprice
-} 
